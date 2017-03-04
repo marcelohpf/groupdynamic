@@ -1,10 +1,10 @@
+package personality;
+
 /** Characteristic.java
  * Define the model to be implemented for each characteristic
  * of the personality of each person, their action and define if is
  * good or bad.
  */
-package personality;
-
 public abstract class Characteristic{
 
   private String name; // Identify the characteristic (not null, not black)
@@ -12,10 +12,6 @@ public abstract class Characteristic{
   //keep the characteristic color and help to group characteristics
   private CharacteristicColor characteristicGroup;
 
-  protected Characteristic(String name, CharacteristicColor characteristicGroup){
-    this.name = name; // fuck the set method
-    this.characteristicGroup = characteristicGroup;
-  }
 
   /** Used by member of group to show your characteristic in action
    * @return action: is execution of the children implementation
@@ -29,6 +25,10 @@ public abstract class Characteristic{
     return action;
   }
 
+  public String toString(){
+    return getName();
+  }
+  
   /** Return the actual name of characteristic colored with
     * characteristicGroup's color
     * @return coloredName: The string name with colors of terminal
@@ -43,8 +43,9 @@ public abstract class Characteristic{
    */
   protected abstract String doCharacteristic();
 
-  public String toString(){
-    return getName();
+  protected Characteristic(String name, CharacteristicColor characteristicGroup){
+    this.name = name; // fuck the set method
+    this.characteristicGroup = characteristicGroup;
   }
 
 }

@@ -1,9 +1,9 @@
+package personality;
+
 /** CharacteristicColor.java
 * Constants that define the colors of characteristic types: good, awesome,
 * bad, awful, with unicode for the terminal colors.
 */
-package personality;
-
 public enum CharacteristicColor {
   // Constants declaration
   AWESOME("1;32", 1),
