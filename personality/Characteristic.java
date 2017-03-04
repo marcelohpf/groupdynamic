@@ -6,16 +6,20 @@
 package personality;
 
 public abstract class Characteristic{
-  
+
   private String name; // Identify the characteristic (not null, not black)
 
-  protected Characteristic(String name){
+  //keep the characteristic color and help to group characteristics
+  private CharacteristicColor characteristicGroup;
+
+  protected Characteristic(String name, CharacteristicColor characteristicGroup){
     this.name = name; // fuck the set method
+    this.characteristicGroup = characteristicGroup;
   }
 
   /** Used by member of group to show your characteristic in action
    * @return action: is execution of the children implementation
-   * @exception: result can't be null or empty string
+   * @throws RuntimeException: result can't be null or empty string
    */
   public final String act() throws RuntimeException{
     String action = this.doCharacteristic();
@@ -25,10 +29,12 @@ public abstract class Characteristic{
     return action;
   }
 
-  /** Return the actual name of characteristic
+  /** Return the actual name of characteristic colored with
+    * characteristicGroup's color
+    * @return coloredName: The string name with colors of terminal
    */
   public String getName(){
-    return this.name;
+    return this.characteristicGroup + this.name + CharacteristicColor.UNDEFINED;
   }
 
   /** This method should be implemented by childrens to define the exclusive
