@@ -21,10 +21,22 @@ public enum CharacteristicColor {
     this.colorAnsiCode = this.unicodePrefix + colorNumber + unicodePosfix;
     this.number = number;
   }
+
+  /** Get the ansi code string to color the terminal
+    * @return colorCode: mounted \u001B[colornumberm
+    */
   public String toString (){
     return this.colorAnsiCode;
   }
-
+  
+  /** Get the group number of the characteristic
+   * @return number: the number of characteristic 
+   * 1 - Awesome
+   * 2 - Good
+   * 3 - Bad
+   * 4 - Awful
+   * 0 - Undefined
+   */
   public Integer getGroup (){
     return this.number;
   }

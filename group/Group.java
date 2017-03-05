@@ -3,6 +3,8 @@ package group;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
+import java.util.Collections;
 
 import personality.Characteristic;
 
@@ -60,6 +62,12 @@ public class Group {
       int randomIndex = indexGenerator.nextInt(characteristics.size());
       System.out.println(characteristics.get(randomIndex).act());
       characteristics.remove(randomIndex);
+      // Only ignore if don't interrupt thread
+      try{
+        TimeUnit.SECONDS.sleep(1);
+      } catch(InterruptedException ie){
+        ie.printStackTrace();
+      }
     }
   }
 
@@ -137,7 +145,7 @@ public class Group {
     for (Member member : this.members) {
       characteristics.addAll(member.getCharacteristics());
     }
-    // TODO: implements the comparable in characteristic and sort it
+    Collections.sort(characteristics);
     return characteristics;
   }
 }
