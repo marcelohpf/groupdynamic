@@ -26,23 +26,23 @@ public final class Main{
    */
   public static void apresentation(){
     System.out.println("Vamos começar!");
-    interation.next(); // wait user interation
+    interation.nextLine(); // wait user interation
     mountGroup();
     System.out.println(UP_CONSOLE);
     System.out.println(CLEAR_CONSOLE);
     System.out.println("Apresentar membros!");
-    interation.next(); // wait user interation
+    interation.nextLine(); // wait user interation
     showMembers();
     System.out.println(UP_CONSOLE);
     System.out.println(CLEAR_CONSOLE);
     System.out.println("Apresentar grupo!");
-    interation.next(); // wait user interation
+    interation.nextLine(); // wait user interation
     showGroupCharacteristics();
-    interation.next(); // wait user interation
+    interation.nextLine(); // wait user interation
     System.out.println(UP_CONSOLE);
     System.out.println(CLEAR_CONSOLE);
     showGroupInWork();
-    interation.next(); // wait user interation
+    interation.nextLine(); // wait user interation
     System.out.println(UP_CONSOLE);
     System.out.println(CLEAR_CONSOLE);
     System.out.println("Bora trabalhar! :D");
@@ -52,12 +52,12 @@ public final class Main{
   private static void showMembers() {
     System.out.println("Os integrantes da iniciativa vingadores: ");
     for (int i=0; i<group.getSize(); i++) {
-      interation.next(); // wait user interation
+      interation.nextLine(); // wait user interation
       System.out.println(UP_CONSOLE);
       System.out.println(CLEAR_CONSOLE);
       System.out.println(group.getMember(i));
     }
-    interation.next(); // wait user interation
+    interation.nextLine(); // wait user interation
   }
 
   private static void showGroupCharacteristics() {
@@ -87,9 +87,5 @@ public final class Main{
         new Member("Example member", 0, "000000000", Discipline.(GPP/MDS), 
           exampleMember));
     */
-    ArrayList<Characteristic> e = new ArrayList<Characteristic>();
-    e.add(new Speaker());
-    e.add(new Speaker());
-    group.addMember(new Member("example",16,"000000000", "GPP", e));
   }
 }
