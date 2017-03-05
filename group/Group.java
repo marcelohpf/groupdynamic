@@ -36,7 +36,7 @@ public class Group {
    * @return characteristic: a bullet list with characteristics colored
    */
   public String getCharacteristic() {
-    StringBuilder characteristics = new StringBuilder("Group is: ");
+    StringBuilder characteristics = new StringBuilder();
     List<Characteristic> characteristicList = getCharacteristicList();
 
     for (Characteristic characteristic : characteristicList) {
@@ -45,6 +45,7 @@ public class Group {
     }
     return characteristics.toString();
   }
+
 
   /** Simulate the group woking with all characteristics together
    * Use the standard output of system
@@ -69,6 +70,8 @@ public class Group {
   public void addMember(Member member) throws RuntimeException{
     Integer index = this.members.indexOf(member);
     if (member != null && index == -1) {
+      System.out.println("Adding member: ");
+      System.out.println(member);
       this.members.add(member);
     } else if (member == null) {
       throw new RuntimeException("New member can't be null");
@@ -84,6 +87,30 @@ public class Group {
    */
   public void removeMember(String member) throws RuntimeException{
     throw new RuntimeException("No no no nooo!");
+  }
+
+  /** Get the number of members in group
+   * @return groupSize: a integer positive
+   */
+  public Integer getSize(){
+    return this.members.size();
+  }
+
+  /** It gets a specific member of the group based in the position in actual
+   *  list of members
+   * The order is defined by addition
+   * @param index: the identify member in group 0 <= idx < groupsize
+   * @return member: get the member in current index
+   * @throw RuntimeException: if the index is out of range
+   */
+  public Member getMember(Integer index) throws RuntimeException {
+    Member member = null; // Default initialization of variable
+    if (index != null && index >= 0 && index < getSize()) {
+      member = this.members.get(index);
+    } else {
+      throw new RuntimeException("Member not exist in this index");
+    }
+    return member;
   }
 
   // Set
