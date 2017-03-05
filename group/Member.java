@@ -15,7 +15,7 @@ public class Member {
   private List<Characteristic> characteristicList; //member personality, at least 2
 
   public Member(String name, Integer age, String registry, String subject,
-                List<Characteristic> characteristicList){
+                List<Characteristic> characteristicList) {
     setName(name);
     setAge(age);
     setRegistry(registry);
@@ -27,16 +27,15 @@ public class Member {
    * characteristics
    * @return memberInformations: Formated string with necessari data
    */
-  public String toString(){
+  public String toString() {
     StringBuilder memberInformations = new StringBuilder();
     memberInformations.append(this.subject);
     memberInformations.append("\t");
     memberInformations.append(this.name);
     memberInformations.append(" - ");
     memberInformations.append(this.age);
-    memberInformations.append("\n");
-    for (Characteristic characteristic :this.characteristicList){
-      memberInformations.append("\t - ");
+    for (Characteristic characteristic :this.characteristicList) {
+      memberInformations.append("\n\t - ");
       memberInformations.append(characteristic);
     }
     return memberInformations.toString();
@@ -44,9 +43,9 @@ public class Member {
 
   /** Represent the characteristic of each member in action
    */
-  public void work(){
+  public void work() {
     System.out.println("Trabalhando sou assim: ");
-    for (Characteristic characteristic :this.characteristicList){
+    for (Characteristic characteristic :this.characteristicList) {
       System.out.println(characteristic.act()+"\n");
     }
   }
@@ -55,15 +54,16 @@ public class Member {
    * group characteristic
    * @return characteristicList: The list with good and bad characteristics
    */
-  public List<Characteristic> getCharacteristics(){
+  public List<Characteristic> getCharacteristics() {
     return this.characteristicList; // Avoid this
   }
 
   // Sets 
   private void setName(String name) throws RuntimeException{
     String regex = "(\\p{IsLatin}| )+";
-    if (name.matches(regex)) {
-      this.name = name;
+    
+    if (name != null && name.trim().matches(regex)) {
+      this.name = name.trim();
     } else {
       throw new RuntimeException("Name contains not latin letters");
     }
@@ -77,17 +77,19 @@ public class Member {
     }
   }
   private void setAge(Integer age) throws RuntimeException{
-    if (age >=16 && age <=150){
+    if (age >=16 && age <=150) {
       this.age = age;
     } else {
       throw new RuntimeException("Age is out of rage: 16 <= age <= 150");
     }
   }
-  private void setCharacteristicList(List<Characteristic> characteristicList){
-    if (characteristicList != null) {
+  private void setCharacteristicList(List<Characteristic> characteristicList) 
+    throws RuntimeException{
+    if (characteristicList != null && characteristicList.size()>= 2) {
       this.characteristicList = characteristicList;
     } else {
-      this.characteristicList = new ArrayList<Characteristic>();
+      throw new RuntimeException("Your characteristic list should have "+
+        "more then 1 element");
     }
   }
 }
