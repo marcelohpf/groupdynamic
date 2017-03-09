@@ -103,5 +103,13 @@ public final class Main{
       new Member("Arthur Temporim", 21, "140016759", "GPP", 
       temporimCharacteristic));
     interation.nextLine(); // wait user interation
+
+    ArrayList<Characteristic> viniciusCharacteristic = new ArrayList<Characteristic>();
+    viniciusCharacteristic.add(new Anxious());
+    viniciusCharacteristic.add(new Smart());
+    group.addMember(
+      new Member("Vinicius Ferreira", 19, "150151331", "MDS", 
+      viniciusCharacteristic));
+    interation.nextLine(); // wait user interation
   }
 }
