@@ -142,6 +142,13 @@ public final class Main{
     group.addMember(
       new Member("Rafael Bragança", 27, "100120181", "MDS",
       rafaelCharacteristic));
+
+    ArrayList<Characteristic> victorCharacteristic = new ArrayList<Characteristic>();
+    victorCharacteristic.add(new Sluggish());
+    victorCharacteristic.add(new Altruistic());
+    group.addMember(
+      new Member("Victor Leite", 24, "160147191", "MDS", 
+      victorCharacteristic));
     interation.nextLine(); // wait user interation
   }
 }
