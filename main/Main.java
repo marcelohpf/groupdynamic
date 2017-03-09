@@ -95,5 +95,15 @@ public final class Main{
       new Member("Marcelo Ferreira", 21, "140056688", "GPP", 
       marceloCharacteristic));
     interation.nextLine(); // wait user interation
+
+
+    ArrayList<Characteristic> joaoCharacteristic = new ArrayList<Characteristic>();
+    joaoCharacteristic.add(new Creative());
+    joaoCharacteristic.add(new Lazy());
+   
+    group.addMember(
+      new Member("João Robson", 19, "150154003", "MDS", 
+      marceloCharacteristic));
+    interation.nextLine(); // wait user interation
   }
 }
