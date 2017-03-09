@@ -105,11 +105,19 @@ public final class Main{
     interation.nextLine(); // wait user interation
 
     ArrayList<Characteristic> viniciusCharacteristic = new ArrayList<Characteristic>();
-    viniciusCharacteristic.add(new Anxious());
+    viniciusCharacteristic.add(new AnxiousV());
     viniciusCharacteristic.add(new Smart());
     group.addMember(
       new Member("Vinicius Ferreira", 19, "150151331", "MDS", 
       viniciusCharacteristic));
+    interation.nextLine(); // wait user interation
+
+    ArrayList<Characteristic> leticiaCharacteristic = new ArrayList<Characteristic>();
+    leticiaCharacteristic.add(new AnxiousL());
+    leticiaCharacteristic.add(new Helpful());
+    group.addMember(
+      new Member("Leticia de Souza", 18, "150015160", "MDS", 
+      leticiaCharacteristic));
     interation.nextLine(); // wait user interation
   }
 }

@@ -3,7 +3,7 @@ package personality;
 public class Pertubador extends Characteristic{
   
   public Pertubador(){
-    super("Pertubador",CharacteristicColor.GOOD);
+    super("Pertubador",CharacteristicColor.BAD);
   }
 
   protected String doCharacteristic(){
