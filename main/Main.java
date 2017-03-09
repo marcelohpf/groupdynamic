@@ -96,4 +96,29 @@ public final class Main{
       marceloCharacteristic));
     interation.nextLine(); // wait user interation
   }
+  ArrayList<Characteristic> eduardoCharecteristic = new ArrayList<Characteristic>();
+    eduardoCharacteristic.add(new Pessimista());
+    eduardoCharacteristic.add(new Devagar());
+    group.addMember(
+      new Member("Eduardo Nunes", 20, "140056149", "GPP",
+      eduardoCharacteristic));
+    interation.nextLine(); // wait user interation
+  }
+  ArrayList<Characteristic> mirandaCharecteristic = new ArrayList<Characteristic>();
+    mirandaCharacteristic.add(new Agonized());
+    mirandaCharacteristic.add(new Hardworking());
+    group.addMember(
+      new Member("Matheus Miranda", 20, "140056793", "GPP",
+      mirandaCharacteristic));
+    interation.nextLine(); // wait user interation
+  }
+  ArrayList<Characteristic> rafaelCharecteristic = new ArrayList<Characteristic>();
+    rafaelCharacteristic.add(new Empolgado());
+    rafaelCharacteristic.add(new Pertubador());
+    group.addMember(
+      new Member("Rafael Bragança", 27, "100120181", "MDS",
+      rafaelCharacteristic));
+    interation.nextLine(); // wait user interation
+  }
+
 }
