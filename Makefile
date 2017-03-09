@@ -1,5 +1,5 @@
 all:
-	javac -g ./*/*
+	javac -g ./*/*.java
 clear:
 	rm ./*/*.class
 run:

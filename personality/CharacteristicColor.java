@@ -6,11 +6,11 @@ package personality;
 */
 public enum CharacteristicColor {
   // Constants declaration
-  AWESOME("1;32", 1),
-  GOOD("1;34", 2),
+  AWESOME("1;32", 0),
+  GOOD("1;34", 1),
   BAD("1;31", 3),
   AWFUL("0;31", 4),
-  UNDEFINED("0",5);
+  UNDEFINED("0",2);
 
   private String colorAnsiCode; //keep the terminal color number
   private final String unicodePrefix = "\u001B["; // unicode simble of \[

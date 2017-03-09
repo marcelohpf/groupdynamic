@@ -87,11 +87,13 @@ public final class Main{
         new Member("Example member", 0, "000000000", Discipline.(GPP/MDS), 
           exampleMember));
     */
-     ArrayList<Characteristic> marceloCharacteristic = new ArrayList<Characteristic>();
-     marceloCharacteristic.add(new Wildcard());
-     marceloCharacteristic.add(new Wildcard());
-     group.addMember(
+    ArrayList<Characteristic> marceloCharacteristic = new ArrayList<Characteristic>();
+    marceloCharacteristic.add(new Wildcard());
+    marceloCharacteristic.add(new Understander());
+    marceloCharacteristic.add(new WordEater());
+    group.addMember(
       new Member("Marcelo Ferreira", 21, "140056688", "GPP", 
-        marceloCharacteristic));
+      marceloCharacteristic));
+    interation.nextLine(); // wait user interation
   }
 }
