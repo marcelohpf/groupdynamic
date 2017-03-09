@@ -97,3 +97,12 @@ public final class Main{
     interation.nextLine(); // wait user interation
   }
 }
+    ArrayList<Characteristic> leticiaCharacteristic = new ArrayList<Characteristic>();
+    leticiaCharacteristic.add(new Anxious());
+    leticiaCharacteristic.add(new Helpful());
+    group.addMember(
+      new Member("Leticia de Souza", 18, "150015160", "MDS", 
+      leticiaCharacteristic));
+    interation.nextLine(); // wait user interation
+  }
+}
