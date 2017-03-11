@@ -1,8 +1,8 @@
 package personality;
 
-public class Distraido extends Characteristic{
+public class Distracted extends Characteristic{
 
-  public Distraido(){
+  public Distracted(){
     super("Distraido",CharacteristicColor.BAD);
   }
 
