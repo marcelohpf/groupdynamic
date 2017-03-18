@@ -1,13 +1,12 @@
 # Dinâmica de Grupo.
 
 	Este projeto consiste em uma dinâmica para que os integrantes de um grupo se
-conheçam de forma rápida.
+	conheçam de forma rápida.
 
 ## Passos
 
-* Cada integrante deve criar uma classe referênte à uma característica boa,
-e outra característica ruim de si. Essa classe deve herdar da classe mãe
-`Characteristic.java`.
+* Cada integrante deve criar uma classe referênte à uma característica boa, e outra característica ruim de si. Essa classe deve herdar da classe mãe
+[Characteristic.java](https://github.com/marcelohpf/groupdynamic/blob/master/personality/Characteristic.java).
 
 * Depois de criar suas características deve-se adicionar essas características
 em uma lista de características e adicionar o membro no grupo.
