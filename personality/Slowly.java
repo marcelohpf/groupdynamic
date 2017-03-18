@@ -1,8 +1,8 @@
 package personality;
 
-public class Devagar extends Characteristic{
+public class Slowly extends Characteristic{
   
-  public Devagar(){
+  public Slowly(){
     super("Devagar",CharacteristicColor.BAD);
   }
 

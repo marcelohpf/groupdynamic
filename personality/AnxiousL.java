@@ -3,7 +3,7 @@ package personality;
 public class AnxiousL extends Characteristic{
   
   public AnxiousL(){
-    super("Ansiosa",CharacteristicColor.GOOD);
+    super("Ansiosa",CharacteristicColor.BAD);
   }
 
   protected String doCharacteristic(){

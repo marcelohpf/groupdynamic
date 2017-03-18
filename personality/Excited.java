@@ -1,8 +1,8 @@
 package personality;
 
-public class Empolgado extends Characteristic{
+public class Excited extends Characteristic{
   
-  public Empolgado(){
+  public Excited(){
     super("Empolgado",CharacteristicColor.GOOD);
   }
 

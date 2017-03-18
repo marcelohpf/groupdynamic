@@ -1,8 +1,8 @@
 package personality;
 
-public class Pertubador extends Characteristic{
+public class Disturbing extends Characteristic{
   
-  public Pertubador(){
+  public Disturbing(){
     super("Pertubador",CharacteristicColor.BAD);
   }
 

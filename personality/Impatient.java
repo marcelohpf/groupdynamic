@@ -1,8 +1,8 @@
 package personality;
 
-public class Impaciente extends Characteristic{
+public class Impatient extends Characteristic{
 
-  public Impaciente(){
+  public Impatient(){
     super("Impaciente",CharacteristicColor.BAD);
   }
 

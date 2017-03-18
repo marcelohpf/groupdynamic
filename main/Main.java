@@ -88,15 +88,9 @@ public final class Main{
           exampleMember));
     */
     ArrayList<Characteristic> marceloCharacteristic = new ArrayList<Characteristic>();
-    ArrayList<Characteristic> arturCharacteristic = new ArrayList<Characteristic>();
-    ArrayList<Characteristic> icaroCharacteristic = new ArrayList<Characteristic>();
     marceloCharacteristic.add(new Wildcard());
     marceloCharacteristic.add(new Understander());
-    marceloCharacteristic.add(new WordEater());
-    arturCharacteristic.add(new Impaciente());
-    arturCharacteristic.add(new CorroAtras());
-    icaroCharacteristic.add(new Paciente());
-    icaroCharacteristic.add(new Distraido());
+    marceloCharacteristic.add(new WordEater());        
     group.addMember(
       new Member("Marcelo Ferreira", 21, "140056688", "GPP", 
       marceloCharacteristic));
@@ -128,8 +122,8 @@ public final class Main{
     interation.nextLine(); // wait user interation
 
     ArrayList<Characteristic> eduardoCharacteristic = new ArrayList<Characteristic>();
-    eduardoCharacteristic.add(new Pessimista());
-    eduardoCharacteristic.add(new Devagar());
+    eduardoCharacteristic.add(new Slowly());
+    eduardoCharacteristic.add(new Pessimistic());
     group.addMember(
       new Member("Eduardo Nunes", 20, "140056149", "GPP",
       eduardoCharacteristic));
@@ -144,29 +138,35 @@ public final class Main{
     interation.nextLine(); // wait user interation
     
     ArrayList<Characteristic> rafaelCharacteristic = new ArrayList<Characteristic>();
-    rafaelCharacteristic.add(new Empolgado());
-    rafaelCharacteristic.add(new Pertubador());
+    rafaelCharacteristic.add(new Disturbing());
+    rafaelCharacteristic.add(new Excited());    
     group.addMember(
       new Member("Rafael Bragança", 27, "100120181", "MDS",
       rafaelCharacteristic));
     interation.nextLine(); // wait user interation
 
     ArrayList<Characteristic> victorCharacteristic = new ArrayList<Characteristic>();
-    victorCharacteristic.add(new Sluggish());
-    victorCharacteristic.add(new Altruistic());
+    victorCharacteristic.add(new Sistematic());
+    victorCharacteristic.add(new Trustworthy());
     group.addMember(
       new Member("Victor Leite", 24, "160147191", "MDS", 
       victorCharacteristic));
     interation.nextLine(); // wait user interation
 
+    ArrayList<Characteristic> arturCharacteristic = new ArrayList<Characteristic>();
+    arturCharacteristic.add(new Impatient());
+    arturCharacteristic.add(new Darting());
     group.addMember(
       new Member("Artur Bersan", 21, "140016813", "GPP", 
       arturCharacteristic));
     interation.nextLine(); // wait user interation
+    
+    ArrayList<Characteristic> icaroCharacteristic = new ArrayList<Characteristic>();
+    icaroCharacteristic.add(new Distracted());
+    icaroCharacteristic.add(new Patient());    
     group.addMember(
       new Member("Ícaro Pires", 19, "150129815", "MDS", 
-      arturCharacteristic));
-
-
+      icaroCharacteristic));
+    interation.nextLine(); // wait user interation
   }
 }
